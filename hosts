@@ -1,0 +1,4 @@
+KubeController1=192.168.122.109
+KubeController2=192.168.122.107
+KubeWorker1=192.168.122.113
+KubeWorker2=192.168.122.241
