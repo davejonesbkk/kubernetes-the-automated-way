@@ -1,9 +1,9 @@
 #!/bin/bash
 
-WORKER0_HOST=`head -1 hosts | sed 's/[=].*$//'`
-WORKER0_IP=`head -1 hosts | sed 's/.*[=]//'`
-WORKER1_HOST=`head -1 hosts | sed 's/[=].*$//'`
-WORKER1_IP=`head -1 hosts | sed 's/.*[=]//'`
+WORKER0_HOST=`cat hosts | sed '3!d' | sed 's/[=].*$//'`
+WORKER0_IP=`cat hosts | sed '3!d' | sed 's/.*[=]//'`
+WORKER1_HOST=`cat hosts | sed '4!d' | sed 's/[=].*$//'`
+WORKER1_IP=`cat hosts | sed '4!d' | sed 's/.*[=]//'`
 
 {
 cat > ${WORKER0_HOST}-csr.json << EOF
