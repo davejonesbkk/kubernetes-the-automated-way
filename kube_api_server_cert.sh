@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd ~/home/david/kthw-demo
 
 CONTROLLER0_IP=`cat hosts | sed '1!d' | sed 's/.*[=]//'`
 CONTROLLER0_HOST=`cat hosts | sed '1!d' | sed 's/[=].*$//'`
